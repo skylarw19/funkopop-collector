@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import Funkopop from '../../components/Funkopop/Funkopop';
+import AddFunko from '../AddFunko/AddFunko';
+import { Route, Link } from 'react-router-dom';
 
 const FunkoCollection = (props) => {
     console.log(props.funkopops)
     return (  
         <>
         <h1>Funko Collection</h1>
-        //conditional rendering
+        <Link exact to="/add">Add FunkoPop</Link>
+
+        {/* conditional rendering */}
         {props.funkopops ?
         <>
             {props.funkopops.map((funkopop)=> 
@@ -18,6 +22,7 @@ const FunkoCollection = (props) => {
         :
         <p>No funko pops in collection</p> 
         }
+        
         </>
     );
 }

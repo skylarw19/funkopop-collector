@@ -46,7 +46,7 @@ class App extends Component {
           user={this.state.user}
           handleLogout={this.handleLogout}
         />
-        <Switch>
+        
           <Route exact path='/login' render={({ history }) => 
             <LoginPage
               history={history}
@@ -59,13 +59,6 @@ class App extends Component {
               handleSignupOrLogin={this.handleSignupOrLogin}
             />
           }/>
-          <Route exact path='/funkopop-secret' render={() => 
-            userAPI.getUser() ? 
-              <FunkopopsSecretPage />
-            :
-              <Redirect to='/login'/>
-          }/>
-
 
           <Route exact path="/funkos" render={() => 
             <FunkoCollection 
@@ -74,7 +67,10 @@ class App extends Component {
           <Route exact path="/wishlist" render={() =>
             <Wishlist />
           } />
-        </Switch>
+          <Route path="/add" render={() =>
+            <AddFunko />
+          } />
+        
       </div>
     );
   }

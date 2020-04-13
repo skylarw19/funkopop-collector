@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 
-const AddFunko = (props) => {
-    return (  
-        <h1>add funko page</h1>
-    );
+class AddFunko extends Component {
+    state = {  }
+    render() { 
+        return (  
+            <h1>Add Funko Page</h1>
+        );
+    }
 }
  
 export default AddFunko;

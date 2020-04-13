@@ -20,6 +20,7 @@ async function index(req, res) {
 async function create(req, res) {
   console.log('user: ', req.user)
   try {
+    req.body.user = req.user._id; ///////////is this correct
     const funkopop = await Funkopop.create(req.body);
     res.status(201).json(funkopop);
   }
