@@ -10,7 +10,10 @@ router.get('/', checkAuth, funkopopsCtrl.index);
 
 // Process the token for only the routes below
 router.use(require('../../config/auth'));
-router.post('/', checkAuth, funkopopsCtrl.create);
+router.post('/add', /*checkAuth, */ funkopopsCtrl.create);
+router.put('/:id', funkopopsCtrl.update);
+router.delete('/:id', funkopopsCtrl.delete)
+
 
 /*----------------------------- Helper Functions ----------------------------*/
 

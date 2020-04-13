@@ -2,7 +2,9 @@ var Funkopop = require('../models/funkopop');
 
 module.exports = {
   index,
-  create
+  create,
+  update,
+  delete: deleteOne
 };
 
 async function index(req, res) {
@@ -25,3 +27,12 @@ async function create(req, res) {
     res.status(500).json(err);
   }
 }
+
+async function update(req,res){
+  
+}
+
+async function deleteOne(req,res){
+
+}
+

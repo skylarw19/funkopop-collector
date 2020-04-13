@@ -8,12 +8,15 @@ import * as funkopopAPI from '../../services/funkopop-api';
 import * as userAPI from '../../services/user-api';
 import Funkopop from '../../components/Funkopop/Funkopop'
 import NavBar from '../../components/NavBar/NavBar'
+import AddFunko from '../AddFunko/AddFunko';
+import Wishlist from '../Wishlist/Wishlist';
+import FunkoCollection from '../FunkoCollection/FunkoCollection';
 
 class App extends Component {
   state = {
     // Initialize user if there's a token, otherwise null
     user: userAPI.getUser(),
-    funkopops: null
+    funkopops: []
   };
 
   /*--------------------------- Callback Methods ---------------------------*/
@@ -22,7 +25,6 @@ class App extends Component {
     userAPI.logout();
     this.setState({ user: null });
   }
-
   handleSignupOrLogin = () => {
     this.setState({user: userAPI.getUser()});
   }
@@ -63,9 +65,12 @@ class App extends Component {
             :
               <Redirect to='/login'/>
           }/>
-          <Route exact path='/' render={() =>
-            <Funkopop />
+          <Route exact path="/funkos" render={() => 
+            <FunkoCollection />
           }/>
+          <Route exact path="/wishlist" render={() =>
+            <Wishlist />
+          } />
         </Switch>
       </div>
     );
