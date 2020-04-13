@@ -1,11 +1,13 @@
 import React from 'react';
 
-const Funkopop = () => {
+const Funkopop = (props) => {
   return (
-    <React.Fragment>
-      <h3>This is the Funkopop Component.</h3>
-      <p>It is located at src/components/Funkopop/Funkopop.jsx</p>
-    </React.Fragment>
+    <> 
+      <h3>Name: {props.funkopop.name}</h3>
+      <p>Category: {props.funkopop.category}</p>
+      <p>Item No: {props.funkopop.itemNo}</p>
+      <p>Exclusivity: {props.funkopop.exclusivity}</p>
+    </>
   );
 }
  

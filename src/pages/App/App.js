@@ -65,8 +65,11 @@ class App extends Component {
             :
               <Redirect to='/login'/>
           }/>
+
+
           <Route exact path="/funkos" render={() => 
-            <FunkoCollection />
+            <FunkoCollection 
+             funkopops={this.state.funkopops} />
           }/>
           <Route exact path="/wishlist" render={() =>
             <Wishlist />
