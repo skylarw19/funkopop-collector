@@ -1,4 +1,4 @@
-var Tktk = require('../models/tktk');
+var Funkopop = require('../models/funkopop');
 
 module.exports = {
   index,
@@ -7,8 +7,8 @@ module.exports = {
 
 async function index(req, res) {
   try{
-      const tktks = await Tktk.find({});
-      res.status(200).json(tktks);
+      const funkopops = await Funkopop.find({});
+      res.status(200).json(funkopops);
   }
   catch(err){
       res.status(500).json(err);
@@ -18,8 +18,8 @@ async function index(req, res) {
 async function create(req, res) {
   console.log('user: ', req.user)
   try {
-    const tktk = await Tktk.create(req.body);
-    res.status(201).json(tktk);
+    const funkopop = await Funkopop.create(req.body);
+    res.status(201).json(funkopop);
   }
   catch(err){
     res.status(500).json(err);
