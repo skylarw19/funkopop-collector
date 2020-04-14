@@ -36,8 +36,6 @@ export function deleteOne(funkoId) {
   return fetch(`${BASE_URL}/${funkoId}`, options).then(res => res.json());
 }
 
-// export function deleteOne(funkoId) {
-//   return fetch(`${BASE_URL}/${funkoId}`, {
-//     method: 'DELETE'
-//   }).then(res => res.json());
-// }
+export function update(funkopop){
+  
+}

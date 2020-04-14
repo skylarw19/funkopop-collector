@@ -3,12 +3,11 @@ import './App.css';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
-import FunkopopsSecretPage from '../FunkopopsSecretPage/FunkopopsSecretPage'
+import AddFunko from '../AddFunko/AddFunko';
+import UpdateFunko from '../UpdateFunko/UpdateFunko'
 import * as funkopopAPI from '../../services/funkopop-api';
 import * as userAPI from '../../services/user-api';
-import Funkopop from '../../components/Funkopop/Funkopop'
 import NavBar from '../../components/NavBar/NavBar'
-import AddFunko from '../AddFunko/AddFunko';
 import Wishlist from '../Wishlist/Wishlist';
 import FunkoCollection from '../FunkoCollection/FunkoCollection';
 
@@ -41,7 +40,13 @@ class App extends Component {
     this.setState(state => ({
       funkopops: state.funkopops.filter(f => f._id !== funkoId)
     }), ()=> this.props.history.push('/funkos'));
-    console.log(funkoId)
+  }
+
+  handleUpdateFunko = async (updatedFunkoData) => {
+    const updatedFunko = await funkopopAPI.update(updatedFunkoData);
+    this.setState(state => ({
+      
+    }))
   }
 
   /*-------------------------- Lifecycle Methods ---------------------------*/
@@ -86,6 +91,12 @@ class App extends Component {
           <Route path="/add" render={({history}) =>
             <AddFunko 
               handleAddFunko={this.handleAddFunko}
+            />
+          } />
+          <Route path="/edit" render={({history, location}) =>
+            <UpdateFunko 
+              handleUpdateFunko={this.handleUpdateFunko}
+              location={location}
             />
           } />
         
