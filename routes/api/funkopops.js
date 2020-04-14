@@ -11,7 +11,7 @@ const funkopopsCtrl = require('../../controllers/funkopops');
 // Process the token for only the routes below
 router.use(require('../../config/auth'));
 router.get('/', checkAuth, funkopopsCtrl.index);
-router.post('/', /*checkAuth, */ funkopopsCtrl.create); // /add
+router.post('/', checkAuth, funkopopsCtrl.create); // /add
 router.put('/:id', funkopopsCtrl.update);
 router.delete('/:id', funkopopsCtrl.delete)
 

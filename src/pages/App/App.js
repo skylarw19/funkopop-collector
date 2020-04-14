@@ -29,6 +29,13 @@ class App extends Component {
     this.setState({user: userAPI.getUser()});
   }
 
+  handleAddFunko = async (newFunkoData) => {
+    const newFunko = await funkopopAPI.create(newFunkoData);
+    this.setState(state => ({
+      funkopops: [...state.funkopops, newFunko]
+    }), () => this.props.history.push('/funkos'));
+  }
+
   /*-------------------------- Lifecycle Methods ---------------------------*/
 
   async componentDidMount() {
@@ -67,8 +74,10 @@ class App extends Component {
           <Route exact path="/wishlist" render={() =>
             <Wishlist />
           } />
-          <Route path="/add" render={() =>
-            <AddFunko />
+          <Route path="/add" render={({history}) =>
+            <AddFunko 
+              handleAddFunko={this.handleAddFunko}
+            />
           } />
         
       </div>
