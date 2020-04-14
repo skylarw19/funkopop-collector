@@ -36,6 +36,14 @@ class App extends Component {
     }), () => this.props.history.push('/funkos'));
   }
 
+  handleDeleteFunko = async (funkoId) => {
+    await funkopopAPI.deleteOne(funkoId);
+    this.setState(state => ({
+      funkopops: state.funkopops.filter(f => f._id !== funkoId)
+    }), ()=> this.props.history.push('/funkos'));
+    console.log(funkoId)
+  }
+
   /*-------------------------- Lifecycle Methods ---------------------------*/
 
   async componentDidMount() {
@@ -67,9 +75,10 @@ class App extends Component {
             />
           }/>
 
-          <Route exact path="/funkos" render={() => 
+          <Route exact path="/funkos" render={({history}) => 
             <FunkoCollection 
-             funkopops={this.state.funkopops} />
+              funkopops={this.state.funkopops}
+              handleDeleteFunko={this.handleDeleteFunko} />
           }/>
           <Route exact path="/wishlist" render={() =>
             <Wishlist />

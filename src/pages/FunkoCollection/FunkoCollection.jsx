@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Funkopop from '../../components/Funkopop/Funkopop';
-import AddFunko from '../AddFunko/AddFunko';
 import { Route, Link } from 'react-router-dom';
 
 const FunkoCollection = (props) => {
@@ -17,6 +16,7 @@ const FunkoCollection = (props) => {
                 <Funkopop
                     key={funkopop._id}
                     funkopop={funkopop}
+                    handleDeleteFunko={props.handleDeleteFunko}
                 />)}
         </>
         :

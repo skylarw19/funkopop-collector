@@ -34,6 +34,11 @@ async function update(req,res){
 }
 
 async function deleteOne(req,res){
-
+  try{
+    const deletedFunko = await Funkopop.findByIdAndDelete(req.params.id)
+    res.status(200).json(deletedFunko)
+  } catch(err){
+    res.status(500).json(err);
+  }
 }
 

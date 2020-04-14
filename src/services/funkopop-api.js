@@ -25,10 +25,19 @@ export function create(funkopop) {
   return fetch(BASE_URL, options).then(res => res.json());
 }
 
-// export function create(funkopop) {
-//   return fetch(BASE_URL, {
-//     method: 'POST',
-//     headers: {'content-type': 'application/json'},
-//     body: JSON.stringify(funkopop)
-//   }).then(res => res.json())
+export function deleteOne(funkoId) {
+  const options = {
+    method: 'DELETE',
+    headers: {
+      'Content-type': 'application/json',
+      'Authorization': 'Bearer ' + tokenService.getToken()
+    },
+  };
+  return fetch(`${BASE_URL}/${funkoId}`, options).then(res => res.json());
+}
+
+// export function deleteOne(funkoId) {
+//   return fetch(`${BASE_URL}/${funkoId}`, {
+//     method: 'DELETE'
+//   }).then(res => res.json());
 // }

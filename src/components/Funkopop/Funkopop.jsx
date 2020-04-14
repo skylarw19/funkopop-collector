@@ -9,7 +9,7 @@ const Funkopop = (props) => {
       <p>Item No: {props.funkopop.itemNo}</p>
       <p>Exclusivity: {props.funkopop.exclusivity}</p>
       <button
-      
+        onClick={()=> props.handleDeleteFunko(props.funkopop._id)}
       >DELETE</button>
     </div>
   );
