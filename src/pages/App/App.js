@@ -44,10 +44,11 @@ class App extends Component {
 
   handleUpdateFunko = async (updatedFunkoData) => {
     const updatedFunko = await funkopopAPI.update(updatedFunkoData);
+    console.log(updatedFunko)
     const newFunkopopsArr = this.state.funkopops.map(f =>
       f._id === updatedFunko._id ? updatedFunko : f);
       this.setState(
-        {funkpops: newFunkopopsArr},
+        {funkopops: newFunkopopsArr},
         ()=> this.props.history.push('/funkos')
       );
   }
