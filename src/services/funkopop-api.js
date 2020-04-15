@@ -36,6 +36,15 @@ export function deleteOne(funkoId) {
   return fetch(`${BASE_URL}/${funkoId}`, options).then(res => res.json());
 }
 
-export function update(funkopop){
-  
+export function update(funkopop) {
+  const options = {
+    method: 'PUT',
+    headers: {
+      'Content-type': 'application/json',
+      'Authorization': 'Bearer ' + tokenService.getToken()
+    },
+    body: JSON.stringify(funkopop)
+  };
+  return fetch(`${BASE_URL}/${funkopop._id}`, options).then(res => res.json());
 }
+

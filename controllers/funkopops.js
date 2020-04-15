@@ -20,7 +20,7 @@ async function index(req, res) {
 async function create(req, res) {
   console.log('user: ', req.user)
   try {
-    req.body.user = req.user._id; ///is this correct
+    req.body.user = req.user._id; //add reference
     const funkopop = await Funkopop.create(req.body);
     res.status(201).json(funkopop);
   }
@@ -29,16 +29,21 @@ async function create(req, res) {
   }
 }
 
-async function update(req,res){
-  
-}
-
 async function deleteOne(req,res){
   try{
     const deletedFunko = await Funkopop.findByIdAndDelete(req.params.id)
     res.status(200).json(deletedFunko)
   } catch(err){
     res.status(500).json(err);
+  }
+}
+
+async function update(req,res){
+  try{
+    const updatedFunko = await Funkopop.findByIdAndUpdate(req.params.id, req.body, {new: true});
+    res.status(200).json(updatedFunko)
+  }catch(err){
+    res.status(500).json(err)
   }
 }
 
