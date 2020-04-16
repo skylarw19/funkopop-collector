@@ -9,7 +9,7 @@ module.exports = {
 
 async function index(req, res) {
   try{
-      const funkopops = await Funkopop.find({});
+      const funkopops = await Funkopop.find({}); //const jobs = await Job.find({user: req.user._id});   // <-- only return jobs for the logged in user
       res.status(200).json(funkopops);
   }
   catch(err){

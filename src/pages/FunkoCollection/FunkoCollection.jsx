@@ -13,9 +13,11 @@ const FunkoCollection = (props) => {
         {props.funkopops ?
         <>
             {props.funkopops.map((funkopop)=> 
+            
                 <Funkopop
                     key={funkopop._id}
                     funkopop={funkopop}
+                    user={props.user}
                     handleDeleteFunko={props.handleDeleteFunko}
                 />)}
         </>

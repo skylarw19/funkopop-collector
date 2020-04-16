@@ -53,10 +53,16 @@ class App extends Component {
       );
   }
 
+  // async getAll(){
+  //   const funkopops = await funkopopAPI.index();
+  // }
+
   /*-------------------------- Lifecycle Methods ---------------------------*/
 
+  //this, as a componentDidMount func doesn't help with the display on the funkopop collection page
+  //bc I have to click on the page before it will display. but this func is needed to setstate.
   async componentDidMount() {
-    const funkopops = await funkopopAPI.index();
+    const funkopops = await funkopopAPI.index();  
     this.setState({ funkopops });
   }
 
@@ -85,7 +91,8 @@ class App extends Component {
           }/>
 
           <Route exact path="/funkos" render={({history}) => 
-            <FunkoCollection 
+            <FunkoCollection
+              user={this.state.user}
               funkopops={this.state.funkopops}
               handleDeleteFunko={this.handleDeleteFunko} />
           }/>
