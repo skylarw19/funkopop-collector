@@ -6,14 +6,14 @@ const FunkoCollection = (props) => {
     console.log(props.funkopops)
     return (  
         <>
-        <h1>Funko Collection</h1>
-        <Link exact to="/add">Add FunkoPop</Link>
-
+        
+        <Link className="btn btn-info" exact to="/add">Add FunkoPop</Link>
+        <br/>
         {/* conditional rendering */}
         {props.funkopops ?
         <>
             {props.funkopops.map((funkopop)=> 
-            
+
                 <Funkopop
                     key={funkopop._id}
                     funkopop={funkopop}

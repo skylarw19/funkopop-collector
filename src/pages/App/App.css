@@ -5,3 +5,11 @@
   align-items: center;
   margin-bottom: 50px;
 }
+
+h1{
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  margin: 0;
+  padding: 20px;
+}

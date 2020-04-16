@@ -71,12 +71,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Welcome to Funkopop</h1>
+        <h1>Welcome to FunkoPop Collector!</h1>
         <NavBar
           user={this.state.user}
           handleLogout={this.handleLogout}
         />
-        
+        <br/>
           <Route exact path='/login' render={({ history }) => 
             <LoginPage
               history={history}

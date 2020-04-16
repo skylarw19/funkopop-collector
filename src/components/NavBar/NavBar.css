@@ -2,7 +2,9 @@
   display: flex;
   justify-content: center;
   margin: 0 0 20px;
-  
+  width: 100%;
+  background-color: cornflowerblue; 
+  padding: 10px;
 }
 
 .NavBar-link {
