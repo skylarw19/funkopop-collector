@@ -10,8 +10,6 @@ const Funkopop = (props) => {
         <p>Category: {props.funkopop.category}</p>
         <p>Item No: {props.funkopop.itemNo}</p>
         <p>Exclusivity: {props.funkopop.exclusivity}</p>
-        <p>owner id: {props.funkopop.user} </p>
-        <p>login id: {props.user._id} </p>
         <Link to={{
             pathname: "/edit",
             state: props.funkopop
