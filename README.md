@@ -9,7 +9,7 @@ FunkoPop vinyl figurines, with large heads and small bodies, have continued to r
 [Trello](https://trello.com/b/4sS3YLW6/funkopop-collector) 
 
 ## View of the App:
-![View of Collection](public/images/app-screenshot)
+![View of Collection](public/images/app-screenshot.png)
 
 ## Technologies Implemented:
 JavaScript, CSS, HTML, Node.js, Express, MongoDB/Mongoose, React, Bootstrap
