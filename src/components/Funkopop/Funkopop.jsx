@@ -6,7 +6,7 @@ const Funkopop = (props) => {
   {if(props.funkopop.user === props.user._id) 
     return (
       <div className="panel panel-default">
-        <h3 className="panel-heading panel-title">{props.funkopop.name} --No. {props.funkopop.itemNo}</h3>
+        <h3 className="panel-title">{props.funkopop.name} ---No. {props.funkopop.itemNo}</h3>
         <div className="panel-body">
           <p>Category: {props.funkopop.category}</p>
           <p>Exclusivity: {props.funkopop.exclusivity}</p>

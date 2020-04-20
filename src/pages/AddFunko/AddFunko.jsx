@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './AddFunko.css'
 
 class AddFunko extends Component {
     state = {  
@@ -28,24 +29,24 @@ class AddFunko extends Component {
     render() { 
         return ( 
         <> 
-            <h1>Add a FunkoPop to your collection!</h1>
+            
             <form onSubmit={this.handleSubmit} >
-                <label >Name (required) </label>
+                <label >Name (required) </label> &nbsp;&nbsp;
                 <input 
                     type="text"
                     name="name"
                     onChange={this.handleChange} /><br/>
-                <label >Category </label>
+                <label >Category </label> &nbsp;&nbsp;
                 <input 
                     type="text"
                     name="category"
                     onChange={this.handleChange} /><br/>
-                <label >ItemNo </label>
+                <label >ItemNo </label> &nbsp;&nbsp;
                 <input 
                     type="text" 
                     name="itemNo"
                     onChange={this.handleChange} /><br/>
-                <label >Exclusivity </label>
+                <label >Exclusivity </label> &nbsp;&nbsp;
                 <input 
                     type="text"
                     name="exclusivity"

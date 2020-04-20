@@ -5,10 +5,8 @@ import './NavBar.css';
 const NavBar = (props) => {
   let nav = props.user ?
     <div className="fullBar">
-      {/* <Link to='/funkopop-secret' className='NavBar-link'>Click here to check authentication!</Link>
-      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; */}
-      <Link to="/funkos">My FunkoPop Collection</Link>&nbsp;&nbsp;|&nbsp;&nbsp;
-      <Link to="/wishlist">WishList  </Link>&nbsp;&nbsp;|&nbsp;&nbsp;
+      <Link to="/funkos" className='NavBar-link' >My FunkoPop Collection</Link>&nbsp;&nbsp;|&nbsp;&nbsp;
+      <Link to="/wishlist" className='NavBar-link' >WishList  </Link>&nbsp;&nbsp;|&nbsp;&nbsp;
       <Link to='' className='NavBar-link' onClick={props.handleLogout}>Logout</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;
       <span className='NavBar-welcome'>Welcome, {props.user.name}</span>

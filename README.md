@@ -23,8 +23,8 @@ Add FunkoPop:
 JavaScript, CSS, HTML, Node.js, Express, MongoDB/Mongoose, React, Bootstrap
 
 ## Credits:
-- font
-- background img
+- Font - Google Fonts Gochi Hand
+- Background Image - freepik BiZKettE1
 - Chajr - David Stinson https://github.com/DavidStinson/chajr
 
 # User Experience:

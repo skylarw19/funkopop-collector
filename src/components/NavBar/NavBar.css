@@ -3,14 +3,17 @@
   justify-content: center;
   margin: 0 0 20px;
   width: 100%;
-  background-color: cornflowerblue; 
   padding: 10px;
+  
 }
 
 .NavBar-link {
   margin: 0 10px;
+  color: black;
+  font-size: 25px;
 }
 
 .NavBar-welcome {
-  color: grey;
+  color: black;
 }
+
