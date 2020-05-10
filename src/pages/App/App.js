@@ -12,6 +12,7 @@ import * as userAPI from '../../services/user-api';
 import NavBar from '../../components/NavBar/NavBar'
 import Wishlist from '../Wishlist/Wishlist';
 import FunkoCollection from '../FunkoCollection/FunkoCollection';
+import WishlistFunko from '../../components/WishlistFunko/WishlistFunko';
 
 class App extends Component {
   state = {
@@ -84,6 +85,10 @@ class App extends Component {
         ()=> this.props.history.push('/wishlist')
       );
   }
+  handleMove = (wishlistFunko) => {
+    this.handleDeleteWishlistFunko(wishlistFunko._id);
+    this.handleAddFunko(wishlistFunko);
+  }
 
   /*-------------------------- Lifecycle Methods ---------------------------*/
 
@@ -143,6 +148,7 @@ class App extends Component {
               user={this.state.user}
               wishlistFunkos={this.state.wishlistFunkos}
               handleDeleteWishlistFunko={this.handleDeleteWishlistFunko}
+              handleMove={this.handleMove}
             />
           } />
           <Route path="/addToWishlist" render={({history}) =>

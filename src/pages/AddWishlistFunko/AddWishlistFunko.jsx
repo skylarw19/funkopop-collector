@@ -11,7 +11,6 @@ class AddWishlistFunko extends Component {
             exclusivity: ""
         }
     }
-
     formRef = React.createRef();
 
     handleSubmit = (e) => {

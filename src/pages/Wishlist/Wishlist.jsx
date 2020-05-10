@@ -17,6 +17,7 @@ const Wishlist = (props) => {
                     wishlistFunko={wishlistFunko}
                     user={props.user}
                     handleDeleteWishlistFunko={props.handleDeleteWishlistFunko}
+                    handleMove={props.handleMove}
                 />
             )}
         </>
