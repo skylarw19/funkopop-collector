@@ -1,19 +1,20 @@
 const express = require('express');
 const router = express.Router();
-const funkopopsCtrl = require('../../controllers/funkopops');
+const wishlistCtrl = require('../../controllers/wishlist');
 
 /*------------------------------ Public Routes ------------------------------*/
 
-// router.get('/', checkAuth, funkopopsCtrl.index);
+// router.get('/', checkAuth, wishlistCtrl.index);
 
 /*----------------------------- Protected Routes ----------------------------*/
 
 // Process the token for only the routes below
 router.use(require('../../config/auth'));
-router.get('/', checkAuth, funkopopsCtrl.index);
-router.post('/', checkAuth, funkopopsCtrl.create); // /add
-router.put('/:id', funkopopsCtrl.update);
-router.delete('/:id', funkopopsCtrl.delete)
+router.get('/', checkAuth, wishlistCtrl.index);
+router.post('/', checkAuth, wishlistCtrl.create); 
+router.put('/:id', wishlistCtrl.update);
+router.delete('/:id', wishlistCtrl.delete)
+
 
 /*----------------------------- Helper Functions ----------------------------*/
 

@@ -1,8 +1,29 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import WishlistFunko from '../../components/WishlistFunko/WishlistFunko';
+import './Wishlist.css'
 
 const Wishlist = (props) => {
     return (  
-        <h1>Wishlist</h1>
+        <>
+        <Link className="btn btn-info addfunkobtn" exact to="/addToWishlist">Add FunkoPop to Wishlist</Link>
+        <br/>
+        {/* conditional rendering */}
+        {props.wishlistFunkos ?
+        <>
+            {props.wishlistFunkos.map((wishlistFunko)=> 
+                <WishlistFunko
+                    key={wishlistFunko._id}
+                    wishlistFunko={wishlistFunko}
+                    user={props.user}
+                    handleDeleteWishlistFunko={props.handleDeleteWishlistFunko}
+                />
+            )}
+        </>
+        :
+        <p>No funko pops in your wishlist</p> 
+        }
+        </>
     );
 }
  
