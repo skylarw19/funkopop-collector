@@ -5,3 +5,19 @@
   align-items: center;
   margin-bottom: 50px;
 }
+
+.panelform{
+  background-color: whitesmoke;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.loginbtn{
+  font-size: 20px;
+}
+
+*{
+  font-size: 20px;
+}
+

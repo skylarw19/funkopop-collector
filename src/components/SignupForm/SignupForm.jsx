@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import * as userAPI from '../../services/user-api';
+import '../../pages/LoginPage/LoginPage.css'
 
 class SignupForm extends Component {
 
@@ -40,8 +41,8 @@ class SignupForm extends Component {
   render() {
     return (
       <div>
-        <header>Sign Up</header>
-        <form onSubmit={this.handleSubmit} >
+        <h3>Sign Up</h3>
+        <form onSubmit={this.handleSubmit} className="panel panelform">
           <div>
             <input 
               type="text"
@@ -80,7 +81,7 @@ class SignupForm extends Component {
           </div>
           <div>
             <button 
-              className="btn btn-default" 
+              className="btn btn-primary" 
               disabled={this.isFormInvalid()}       
             >
               Sign Up
