@@ -11,6 +11,10 @@ h1{
   width: 100%;
   text-align: center;
   margin: 0;
-  padding: 20px;
-  font-weight: bold;
+  padding: 5px;
+  /* font-weight: bold; */
+  background-color: #C82B30;
+  /* background-color: #D9534F; */
+  color: #B8B8B8;
+  
 }

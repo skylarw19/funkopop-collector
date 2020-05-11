@@ -8,9 +8,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(https://i.imgur.com/SkMwp0I.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* background-image: url(https://i.imgur.com/SkMwp0I.jpg); */
+  /* background-size: cover;
+  background-repeat: no-repeat; */
+  background-color: #85BDDD;
+  /* background-color: #C4E6FE; */
 }
 
 code {

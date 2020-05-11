@@ -6,7 +6,7 @@ import './Wishlist.css'
 const Wishlist = (props) => {
     return (  
         <>
-        <Link className="btn btn-info addfunkobtn" exact to="/addToWishlist">Add FunkoPop to Wishlist</Link>
+        <Link className="btn btn-primary addfunkobtn" exact to="/addToWishlist">Add FunkoPop to Wishlist</Link>
         <br/>
         {/* conditional rendering */}
         {props.wishlistFunkos ?

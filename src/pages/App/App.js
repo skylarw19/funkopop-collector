@@ -106,7 +106,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Welcome to FunkoPop Collector!</h1>
+        <h1>FunkoPop Collector</h1>
         <NavBar
           user={this.state.user}
           handleLogout={this.handleLogout}

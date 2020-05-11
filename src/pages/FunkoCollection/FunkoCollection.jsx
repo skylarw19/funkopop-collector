@@ -6,7 +6,7 @@ import './FunkoCollection.css'
 const FunkoCollection = (props) => {
     return (  
         <>
-        <Link className="btn btn-info addfunkobtn" exact to="/add">Add FunkoPop</Link>
+        <Link className="btn btn-primary addfunkobtn" exact to="/add">Add FunkoPop</Link>
         <br/>
         {/* conditional rendering */}
         {props.funkopops ?
