@@ -30,7 +30,7 @@ class AddFunko extends Component {
         return ( 
         <> 
             
-            <form onSubmit={this.handleSubmit} >
+            <form onSubmit={this.handleSubmit} className="panel panelform" >
                 <label >Name (required) </label> &nbsp;&nbsp;
                 <input 
                     type="text"
@@ -52,7 +52,7 @@ class AddFunko extends Component {
                     name="exclusivity"
                     onChange={this.handleChange} /><br/>
                 
-                <button type="submit">Add Funko Pop</button>
+                <button className="btn btn-primary addfunkobtn" type="submit">Add Funko Pop</button>
             </form>
         </>
         );

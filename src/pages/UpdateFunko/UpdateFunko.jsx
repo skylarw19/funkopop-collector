@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../AddFunko/AddFunko.css'
 
 class UpdateFunko extends Component {
     state = {  
@@ -19,34 +20,34 @@ class UpdateFunko extends Component {
     render() { 
         return ( 
         <>  
-            <h1>Update below Funkopop</h1>
-            <form onSubmit={this.handleSubmit} >
-                <label >Name </label>
+            <h3>Update below FunkoPop</h3>
+            <form onSubmit={this.handleSubmit} className="panel panelform">
+                <label >Name </label> &nbsp;&nbsp;
                 <input 
                     type="text"
                     name="name"
                     value={this.state.formData.name}
                     onChange={this.handleChange} /><br/>
-                <label >Category </label>
+                <label >Category </label> &nbsp;&nbsp;
                 <input 
                     type="text"
                     name="category"
                     value={this.state.formData.category}
                     onChange={this.handleChange} /><br/>
-                <label >ItemNo </label>
+                <label >ItemNo </label> &nbsp;&nbsp;
                 <input 
                     type="text" 
                     name="itemNo"
                     value={this.state.formData.itemNo}
                     onChange={this.handleChange} /><br/>
-                <label >Exclusivity </label>
+                <label >Exclusivity </label> &nbsp;&nbsp;
                 <input 
                     type="text"
                     name="exclusivity"
                     value={this.state.formData.exclusivity}
                     onChange={this.handleChange} /><br/>
                 
-                <button type="submit">Update FunkoPop</button>
+                <button className="btn btn-primary addfunkobtn" type="submit">Update FunkoPop</button>
             </form>
         </>
         );

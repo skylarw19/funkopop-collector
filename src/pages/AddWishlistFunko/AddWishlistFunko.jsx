@@ -28,7 +28,7 @@ class AddWishlistFunko extends Component {
     render() { 
         return ( 
         <> 
-            <form onSubmit={this.handleSubmit} >
+            <form onSubmit={this.handleSubmit} className="panel panelform" >
                 <label >Name (required) </label> &nbsp;&nbsp;
                 <input 
                     type="text"
@@ -50,7 +50,7 @@ class AddWishlistFunko extends Component {
                     name="exclusivity"
                     onChange={this.handleChange} /><br/>
                 
-                <button type="submit">Add Funko Pop to Wishlist</button>
+                <button className="btn btn-primary addfunkobtn" type="submit">Add Funko Pop to Wishlist</button>
             </form>
         </>
         );

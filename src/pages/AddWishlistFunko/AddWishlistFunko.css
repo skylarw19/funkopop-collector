@@ -1,3 +1,15 @@
-*{
-    font-size: 25px;
+.addfunkobtn{
+    font-size: 20px;
+}
+
+.panelform{
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+}
+
+label{
+    font-size: 20px;
+    font-weight: none;
 }
