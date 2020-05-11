@@ -16,7 +16,6 @@ JavaScript, CSS, HTML, Node.js, Express, MongoDB/Mongoose, React, Bootstrap
 
 ## Credits:
 - Font - Google Fonts Gochi Hand
-- Background Image - freepik BiZKettE1
 - Chajr - David Stinson https://github.com/DavidStinson/chajr
 
 # User Experience:
@@ -25,6 +24,7 @@ Although pretending otherwise, David is obsessed with FunkoPops - he has a secre
 
 ## Next Steps:
 - Add personal profile page
-- Add wishlist page
-- Allow movement of items from wishlist page to collection page
-- Add search functionality and API
+- ~~Add wishlist page~~
+- ~~Allow movement of items from wishlist page to collection page~~
+- Add search functionality
+- Create categories to sort/filter collection
