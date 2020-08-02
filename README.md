@@ -3,6 +3,8 @@
 ## Introduction:
 FunkoPop vinyl figurines, with large heads and small bodies, have continued to rise in popularity. As collectors continue to expand their vault of FunkoPops, an app is necessary to track all of them!
 
+FunkoPop Collector is a MERN stack CRUD application, allowing users to track and add funkopops to their collection, as well as add any items to their wishlist. Once a user personally owns a funkopop on their wishlist, they may move it to their current collection.
+
 ## Check out the App:
 [Check out FunkoPop Collector](https://funkopop-collector.herokuapp.com/) 
 
