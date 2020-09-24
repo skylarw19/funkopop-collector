@@ -30,4 +30,4 @@ Although pretending otherwise, David is obsessed with FunkoPops - he has a secre
 - ~~Allow movement of items from wishlist page to collection page~~
 - Add search functionality
 - Create categories to sort/filter collection
-- update favicon
+- ~~update favicon~~

@@ -9,7 +9,8 @@ import AddWishlistFunko from '../AddWishlistFunko/AddWishlistFunko';
 import * as funkopopAPI from '../../services/funkopop-api';
 import * as wishlistAPI from '../../services/wishlist-api';
 import * as userAPI from '../../services/user-api';
-import NavBar from '../../components/NavBar/NavBar'
+import NavBar from '../../components/NavBar/NavBar';
+import LandingPage from '../../components/LandingPage/LandingPage';
 import Wishlist from '../Wishlist/Wishlist';
 import FunkoCollection from '../FunkoCollection/FunkoCollection';
 import WishlistFunko from '../../components/WishlistFunko/WishlistFunko';
@@ -111,6 +112,7 @@ class App extends Component {
           user={this.state.user}
           handleLogout={this.handleLogout}
         />
+        <LandingPage user={this.state.user}/>
         <br/>
           <Route exact path='/login' render={({ history }) => 
             <LoginPage
